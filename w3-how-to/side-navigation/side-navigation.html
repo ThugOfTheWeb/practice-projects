@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Side Navigation</title>
+    <style>
+        .navIcon{
+            font-size: 32px;
+            cursor: pointer;
+        }
+        .sidenav{
+            height: 100%;
+            /* width: 200px; */
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: #111;
+            padding-top: 60px;
+            overflow: hidden;
+            transition: .3s;
+        }
+        .sidenav a{
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            text-decoration: none;
+            padding: 8px 8px 8px 32px;
+            transition: .3s;
+        }
+        .sidenav a:hover, .ofcanvas a:focus{
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #main{
+            transition: margin-left .3s;
+            padding: 20px;
+            /* margin-left: 200px; */
+            font-family: Roboto, sans-serif;           
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <span class="navIcon" onclick="openNav()">&#9776</span>
+    <div id="main">
+        <h1>Lorem ipsum dolor sit amet consectetur.</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto deserunt quidem voluptate praesentium. Distinctio, aliquam dicta! Tempora quam illo, aliquid libero recusandae sunt molestias dignissimos sint non distinctio quae, illum eaque aliquam, animi accusantium ad aperiam? Laborum, harum! Iusto cum quam est nulla asperiores sit atque ea inventore laudantium dolorem, dolores beatae nobis minima incidunt perferendis magnam rem aliquam ipsam, molestiae a cupiditate harum officiis dicta! Rerum tenetur incidunt eum ratione, qui corporis possimus odio sunt vitae enim doloribus deleniti beatae sed ab iure similique? Vitae, in facere! Optio incidunt non sint aspernatur quam mollitia fugiat eligendi eveniet asperiores libero?
+        </p>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, et.</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit at quaerat aspernatur ipsa, cupiditate vel doloremque atque optio repellat asperiores ratione architecto iusto fuga expedita ad dolorem dignissimos? Provident, minus consequuntur neque quasi obcaecati veniam. Delectus modi, voluptatem tempora suscipit non nam distinctio natus officia obcaecati dolores quod unde ipsam.
+        </p>
+    </div>
+    <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";//to push the content
+            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+        }
+        function closeNav(){
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "#fff";           
+                     
+        }
+
+    </script>   
+</body>
+</html>

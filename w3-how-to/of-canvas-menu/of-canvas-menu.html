@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Off-Canvas Menu</title>
+    <style>
+        .menu-icon{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .closebtn{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            margin-left: 50px;
+            font-size: 36px;
+        }
+        .sidenav{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding-top: 60px;
+            transition: .5s;
+            overflow-x: hidden;
+        }
+
+        .sidenav a{
+            padding: 8px 8px 8px 32px;
+            color: #818181;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: block;
+            transition: .3s;
+        }
+        .sidenav a:hover, .offcanvas:focus {
+            color: #f1f1f1;
+        }
+        #main{
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a> 
+    </div>
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <div id="main">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla laboriosam, tempore accusamus deserunt excepturi eos modi iure facere perferendis quaerat fuga porro dignissimos aliquam doloribus ullam adipisci voluptas ipsa quam possimus repellat. Alias modi cumque ad sapiente rem vero perspiciatis eos? Totam modi unde exercitationem dicta officia similique eum voluptatem?</p>
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat adipisci dignissimos ea libero doloribus veritatis quas ad obcaecati delectus ut sint rerum explicabo minima deleniti totam! Eum ullam, itaque alias quasi consequuntur vel eligendi et quas! Molestias nesciunt blanditiis, ipsam quia suscipit numquam soluta tempore alias impedit facilis aspernatur veniam necessitatibus consectetur qui reiciendis deserunt provident exercitationem libero repudiandae eveniet doloribus inventore dignissimos id ducimus! Dolorem, beatae? Ipsa reiciendis, quam itaque distinctio vero officiis obcaecati dignissimos exercitationem maiores eum natus dolor praesentium veniam, aliquam repellendus et enim tempore ratione. Qui, odio? Aliquid natus quidem dolor quis debitis, maiores dolorem.</p>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veritatis repellat laudantium, perspiciatis expedita est libero molestias, commodi esse at rerum velit impedit reprehenderit odio, architecto alias eos. Cupiditate accusantium ratione mollitia, hic velit quidem pariatur impedit deleniti voluptatibus ea, ipsum vel dicta esse adipisci quibusdam omnis veniam alias totam quis molestiae porro saepe blanditiis. Et quis nisi in velit!</p>
+    </div>
+
+    <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0, 0, 0, .4)";
+        }
+        function closeNav(){
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "#fff";            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Hamburger Menu Icon</title>
+	<style>
+		.menu{
+			display: inline-block;
+			cursor: pointer;
+		}
+		.bar {
+			width: 35px;
+			height: 5px;
+			background-color: black;
+			margin: 6px 0;
+			transition: .4s;
+		}
+		.change .bar-1{
+			transform: rotate(-45deg) translate(-9px, 6px);
+		}
+		.change .bar-2{
+			opacity: 0;
+		}
+		.change .bar-3{
+			transform: rotate(45deg) translate(-8px, -8px);
+		}
+	</style>
+</head>
+<body>
+	<h2>Menu icon</h2>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<h2>Animated Menu Icon</h2>
+
+	<div class="menu">
+		<div class="bar bar-1"></div>
+		<div class="bar bar-2"></div>
+		<div class="bar bar-3"></div>
+	</div>
+	<script>
+	 let menu = document.querySelector(".menu");
+	 menu.addEventListener('click', change, false);
+	 function change(e){
+		 this.classList.toggle("change");
+	 }
+	
+	</script>
+</body>
+</html>
